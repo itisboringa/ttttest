@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+ 
+<head>
+    <meta charset="utf-8">
+ 
+    <title></title>
+	<style>
+		.use
+		{
+			
+		}
+		
+		.All
+		{
+			display: flex;
+			
+		}
+		
+		
+		.One
+		{
+			flex: 0.2;
+		}
+		.Two
+		{
+			flex: 0.4;
+		}
+		.Three
+		{
+			flex: 0.2;
+		}
+		
+		.show
+		{
+			
+		}
+		
+		.but
+		{
+			background-color: blue;
+			color: white;
+		}
+	</style>
+	<script>
+		var num = 0;
+		function add()
+		{
+			var input = document.getElementById("content");
+			var x = num;
+			
+			// 第一行
+			var div = document.createElement("div");
+			div.style.display = 'flex';
+			
+			
+			var divOne = document.createElement("div");
+			var divTwo = document.createElement("div");
+			var divThree = document.createElement("div");
+			divOne.style.flex = '0.2px';
+			divTwo.style.flex = '0.2px';
+			divThree.style.flex = '0.2px';
+		
+		
+			var bu1 = document.createElement("input");
+			bu1.style.border = 'none';
+			bu1.style.background = 'white';
+			bu1.setAttribute("type", "button");
+			bu1.setAttribute("value", input.value);
+			bu1.setAttribute("onclick", "turn(this)");
+			
+			var node2=document.createTextNode("未完成");
+			//node2.setAttribute("id", x+"two");
+			
+			var bu = document.createElement("input");
+			bu.style.background = 'blue';
+			bu.style.color = 'white';
+			bu.setAttribute("type", "button");
+			bu.setAttribute("value", "删除");
+			bu.setAttribute("onclick", "delect(this)");
+			div.setAttribute("id", x);
+			
+			
+			divOne.appendChild(bu1);
+			divTwo.appendChild(node2);
+			divTwo.setAttribute("id", x+"two")
+			divThree.appendChild(bu);
+			
+			
+			div.appendChild(divOne);
+			div.appendChild(divTwo);
+			div.appendChild(divThree);
+			
+			var element = document.getElementById("All");
+			element.appendChild(div);
+			
+			
+			num++;
+		}
+		
+		function delect(obj)
+		{
+			var element = document.getElementById("All");
+			
+			var div = document.getElementById(obj.parentNode.parentNode.id);
+			element.removeChild(div);
+		}
+		
+		function all()
+		{
+			alert(".");
+		}
+		
+		function no()
+		{
+			alert(".");
+			for (var i = 0; i < num; i++) {
+				var x = document.getElementById(i+'two');
+				if(x.innerText.match("已完成"))
+				{
+					x.parentNode.style.display = 'none';
+				}
+				else
+				{
+					x.parentNode.style.display = 'flex';
+				}
+				
+			}
+		}
+		
+		function yes()
+		{
+			alert(".");
+			for (var i = 0; i < num; i++) {
+				var x = document.getElementById(i+'two');
+				if(x.innerText.match("未完成"))
+				{
+					x.parentNode.style.display = 'none';
+				}
+				else
+				{
+					x.parentNode.style.display = 'flex';
+				}
+				
+			}
+		}
+		
+		function turn(obj)
+		{
+			
+			document.getElementById(obj.parentNode.parentNode.id + "two").innerHTML = "已完成";
+		}
+		
+		
+	</script>
+	
+</head>
+	<body>
+		<h1>My Todo with React</h1>
+		<hr />
+		<div id="inPut">
+			<input type="text" id="content" name="fname" placeholder="TODO">
+			<input type="button" onclick="add()" value="添加">
+		</div>
+		<div id="All" style="height: 500px;">
+			
+		</div> 
+		
+		<div id="show">
+			show
+		</div>
+		
+		<div id="fouth">
+			<button class="but" id="all" type="button" onclick="all()">全部</button>
+			<button class="but" id="no" type="button" onclick="no()">还未完成</button>
+			<button class="but" id="yes" type="button" onclick="yes()">已完成</button>
+		</div>
+	
+	</body>
+</html>

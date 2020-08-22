@@ -104,44 +104,56 @@
 			
 			var div = document.getElementById(obj.parentNode.parentNode.id);
 			element.removeChild(div);
+			
+			
 		}
 		
-		function all()
+		function ll()
 		{
-			alert(".");
+			for (var i = 0; i < num; i++) {
+				if(document.getElementById(i+'two')){
+					var x = document.getElementById(i+'two');
+					
+					x.parentNode.style.display = 'flex';
+					
+				}
+			}
 		}
 		
 		function no()
 		{
-			alert(".");
+			
 			for (var i = 0; i < num; i++) {
-				var x = document.getElementById(i+'two');
-				if(x.innerText.match("已完成"))
-				{
-					x.parentNode.style.display = 'none';
+				if(document.getElementById(i+'two')){
+					var x = document.getElementById(i+'two');
+					
+					if(x.innerText.match("已完成"))
+					{
+						x.parentNode.style.display = 'none';
+					}
+					else
+					{
+						x.parentNode.style.display = 'flex';
+					}
 				}
-				else
-				{
-					x.parentNode.style.display = 'flex';
-				}
-				
 			}
 		}
 		
 		function yes()
 		{
-			alert(".");
+			
 			for (var i = 0; i < num; i++) {
-				var x = document.getElementById(i+'two');
-				if(x.innerText.match("未完成"))
-				{
-					x.parentNode.style.display = 'none';
+				if(document.getElementById(i+'two')){
+					var x = document.getElementById(i+'two');
+					if(x.innerText.match("未完成"))
+					{
+						x.parentNode.style.display = 'none';
+					}
+					else
+					{
+						x.parentNode.style.display = 'flex';
+					}
 				}
-				else
-				{
-					x.parentNode.style.display = 'flex';
-				}
-				
 			}
 		}
 		
@@ -171,7 +183,7 @@
 		</div>
 		
 		<div id="fouth">
-			<button class="but" id="all" type="button" onclick="all()">全部</button>
+			<button class="but" id="all" type="button" onclick="ll()">全部</button>
 			<button class="but" id="no" type="button" onclick="no()">还未完成</button>
 			<button class="but" id="yes" type="button" onclick="yes()">已完成</button>
 		</div>

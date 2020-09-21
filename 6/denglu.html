@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>登录</title>
+
+
+<style>
+	.One{
+		display: flex;
+	}
+	.OneT,
+	.OneF{
+		flex: 1;
+	}
+	
+	.yanZhengTu{
+		height: 20px;
+		width: 80px;
+	}
+	
+	.yanZheng{
+		padding: 10px;
+	}
+</style>
+
+<script>
+	
+	
+	
+	
+	function yanzheng(){
+		if(document.getElementById("yonghuming").value==""){
+			alert("用户名不能为空");
+			return false;
+		}
+		
+		if(document.getElementById("mima").value==""){
+			alert("密码不能为空");
+			return false;
+		}
+		
+		if(document.getElementById("textcode").value==""){
+			alert("验证码不能为空");
+			return false;
+		}
+		if(document.getElementById("yonghuming").value=="100001"&&document.getElementById("mima").value=="333"&&document.getElementById("textcode").value=="1111"){alert("登陆成功"); return true;}
+		if(document.getElementById("yonghuming").value=="100002"&&document.getElementById("mima").value=="444"&&document.getElementById("textcode").value=="1111"){alert("登陆成功");return true;}
+		if(document.getElementById("yonghuming").value=="10001"&&document.getElementById("mima").value=="555"&&document.getElementById("textcode").value=="1111"){alert("登陆成功");return true;}
+		if(document.getElementById("yonghuming").value=="1001"&&document.getElementById("mima").value=="666"&&document.getElementById("textcode").value=="1111"){alert("登陆成功");return true;}
+		
+		return false;
+		
+	}
+</script>
+
+</head>
+	<body>
+		<br />
+		<br />
+		<br /><br />
+		<hr />
+		<div align="center">
+			<h1>学籍管理系统</h1>
+		</div>
+		<hr style="color: blueviolet;" />
+		
+		<div class="One">
+			<div class="OneF">
+				<img src="http://202.200.112.200/(yyvqvjr3r2uspeqg2qgblw30)/logo/login_pic.png" />
+			</div>
+			
+			<div class="OneT">
+				
+				<br />
+				<br />
+				<br />
+				
+				<form action="guanli.html" class="F" id="Form" onsubmit="return yanzheng()">
+					<div style="padding: 10px;">
+						<label>用户名</label>
+						<input type="text"  id="yonghuming" />
+					</div>
+					
+					
+					<div style="padding: 10px;">
+						<label>密&nbsp;&nbsp;&nbsp;码</label>
+						<input type="password"  id="mima" />
+					</div>
+					<div class="yanZheng">
+						验证码
+						<input type="text" name="textcode" id="textcode" />
+						
+							<img class="yanZhengTu" src="data:image/jpeg;base64,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" />
+						
+					</div>
+					<div class="leiXing" style="padding: 5px;">
+						<input type="radio" name="leiXing" value="学生用户" title="学生用户" checked="" />
+						<label>学生用户</label>
+						<input type="radio" name="leiXing" value="教师用户" title="教师用户" />
+						<label>教师用户</label>
+						<input type="radio" name="leiXing" value="管理员" title="管理员" />
+						<label>管理员</label>
+					</div>
+					<div class="anNiu" style="padding: 5px;">
+						<tr>
+							&nbsp;
+							<td>
+								<button type="submit" id="denglu">登录</button>
+								&nbsp;&nbsp;
+							</td>
+							<td>
+								<button type="reset">重置</button>
+								&nbsp;&nbsp;
+							</td>
+							<td>
+								<a href="file:///F:/Desktop/%E4%BD%9C%E4%B8%9A/java%20web/zhuce.html">注册</a>
+							</td>
+							<td>
+								<a href="file:///F:/Desktop/%E4%BD%9C%E4%B8%9A/java%20web/guanli.html">管理</a>
+							</td>
+						</tr>
+					</div>
+				</form>
+			</div>
+		</div>
+	</body>
+</html>

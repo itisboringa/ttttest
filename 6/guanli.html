@@ -1,0 +1,138 @@
+<!DOCTYPE html PUBLIC "-//W3C//Dth XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/Dth/xhtml1-transitional.dth">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>管理</title>
+
+
+<style>
+	.Tab{
+		board
+	}
+	.One{
+		display: flex;
+	}
+	.One1{
+		flex: 1;
+	}
+	.One2{
+		flex: 8;
+	}
+</style>
+	
+
+<script>
+	function shanchu(){
+		alert("删除？");
+	}
+	function xiugai(){
+		alert("修改？");
+	}
+	function chongzhimima(){
+		alert("重置密码？")
+	}
+</script>
+</head>
+	<body>
+		<div align="center">
+			<img src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=4213252979,270032452&fm=26&gp=0.jpg" />
+		</div>
+		
+		
+		<br />
+		<br />
+		<br />
+		<hr />
+		<br />
+		<br />
+		
+		<div class="One">
+			<div class="One1"></div>
+			<div class="One2">
+				<table class="Tab" border="1px">
+					<tr>
+						<th>用户名</th>
+						<th>姓名</th>
+						<th>用户类型</th>
+						<th>手机号码</th>
+						<th>邮箱</th>
+						<th>所在单位</th>
+						<th>
+							
+						</th>
+					</tr>
+					<tr>
+						<td>100001</td>
+						<td>张三</td>
+						<td>学生</td>
+						<td>15011110000</td>
+						<td>14@qq.com</td>
+						<td>西安理工计科</td>
+						<th>
+							<button onclick="shanchu()" id="shanchu">删除</button>
+							<button onclick="xiugai()" id="xiugai">修改</button>
+							<button onclick="chongzhimima()" id="chongzhimima">重置密码</button>
+						</th>
+					</tr>
+					<tr>
+						<td>100002</td>
+						<td>李四</td>
+						<td>学生</td>
+						<td>1666666666</td>
+						<td>15@qq.com</td>
+						<td>西理工物联网</td>
+						<th>
+							<button onclick="shanchu()" id="shanchu">删除</button>
+							<button onclick="xiugai()" id="xiugai">修改</button>
+							<button onclick="chongzhimima()" id="chongzhimima">重置密码</button>
+						</th>
+					</tr>
+					<tr>
+					
+						<td>10001</td>
+						<td>王五</td>
+						<td>老师</td>
+						<td>1662141266</td>
+						<td>546312@qq.com</td>
+						<td>西理计算机教授</td>
+						<th>
+							<button onclick="shanchu()" id="shanchu">删除</button>
+							<button onclick="xiugai()" id="xiugai">修改</button>
+							<button onclick="chongzhimima()" id="chongzhimima">重置密码</button>
+						</th>
+					</tr>
+					<tr>
+						<td>101</td>
+						<td>赵六</td>
+						<td>管理员</td>
+						<td>13246586</td>
+						<td>1585544512@qq.com</td>
+						<td>西理工计算机院领导</td>
+						<th>
+							<button onclick="shanchu()" id="shanchu">删除</button>
+							<button onclick="xiugai()" id="xiugai">修改</button>
+							<button onclick="chongzhimima()" id="chongzhimima">重置密码</button>
+						</th>
+					</tr>
+					
+				</table>
+				
+			</div>
+		</div>
+		<br />
+		<br />
+		
+		<div class="One">
+			<div class="One1"></div>
+			<div class="One2">
+				<form>
+					<label>按学号查询</label>
+					<input type="text" />
+					<button type="button" onclick="">查询</button>
+				</form>
+			</div>
+		</div>
+		
+	</body>
+</html>

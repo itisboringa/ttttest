@@ -1,0 +1,154 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>注册</title>
+
+
+<style>
+	.jianGe{
+		height: 40px;
+	}
+	
+	.One{
+		display: flex;
+	}
+	.OneF{
+		flex: 1;
+	}
+</style>
+
+<script>
+	function yanzheng(){
+		if(document.getElementById("yonghuming").value==""){
+			alert("用户名不能为空");
+			return false;
+		}
+		if(document.getElementById("xingming").value==""){
+			alert("姓名不能为空");
+			return false;
+		}
+		
+		if(document.getElementById("mima").value==""){
+			alert("密码不能为空");
+			return false;
+		}
+		if(document.getElementById("querenmima").value==""){
+			alert("确认密码不能为空");
+			return false;
+		}
+		if(document.getElementById("shoujihao").value==""){
+			alert("手机号码不能为空");
+			return false;
+		}
+		if(document.getElementById("youxiang").value==""){
+			alert("邮箱不能为空");
+			return false;
+		}
+		if(document.getElementById("danwei").value==""){
+			alert("所在单位不能为空");
+			return false;
+		}
+		
+		if(document.getElementById("yanzhengma").value==""){
+			alert("验证码不能为空");
+			return false;
+		}
+		if(document.getElementById("yanzhengma").value!="1111"){
+			return false;
+		}
+		if(document.getElementById("mima").value!==document.getElementById("querenmima").value){
+			alert("密码不一致");
+			return false;
+		}
+		return false;
+		
+	}
+</script>
+
+</head>
+	<body>
+		<div class="One">
+			<div class="OneF">
+				<img style="width: 400px; height: auto; " src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=3377720714,4137337316&fm=26&gp=0.jpg" />
+			</div>
+			
+			<div class="OneF" style="text-align: left; line-height: 250px;">
+				<h1>学籍管理系统注册</h1>
+			</div>
+		</div>
+		
+		<hr/>
+		<div class="One">
+			<div class="OneF">
+				<form action="denglu.html" onsubmit="return yanzheng()">
+					<table>
+						<tr class="jianGe">
+							<td><label class="jianGe">用户类型</label></td>
+							<td><select id="leixing">
+								<option>学生用户</option>
+								<option>教师用户</option>
+								<option>管理员</option>
+							</select></td>
+						</tr>
+						<tr class="jianGe">
+							<td><label class="jianGe">用户名</label></td>
+							<td><input type="text" id="yonghuming" /></td>
+						</tr>
+						<tr class="jianGe">
+							<td><label class="jianGe">姓名</label></td>
+							<td><input type="text" id="xingming" /></td>
+						</tr>
+						<tr class="jianGe">
+							<td><label class="jianGe">密码</label></td>
+							<td><input type="password" id="mima" /></td>
+						</tr>
+						<tr class="jianGe">
+							<td><label class="jianGe">确认密码</label></td>
+							<td><input type="password" id="querenmima" /></td>
+						</tr>
+						<tr class="jianGe">
+							<td><label class="jianGe">手机号码</label></td>
+							<td><input type="text" id="shoujihao" /></td>
+						</tr>
+						<tr class="jianGe">
+							<td><label class="jianGe">邮箱</label></td>
+							<td><input type="email" id="youxiang" /></td>
+						</tr>
+						<tr class="jianGe">
+							<td><label class="jianGe">所在单位</label></td>
+							<td><input type="text" id="danwei" /></td>
+						</tr>
+						<tr class="jianGe">
+							<td><label class="jianGe">验证码</label></td>
+							<td><input type="text" id="yanzhengma" /></td>
+						</tr>
+						<tr>
+							&nbsp;
+							
+							<td>
+								<button type="reset">重置</button>
+								&nbsp;&nbsp;
+							</td>
+							<td>
+								<button type="submit">注册</button>
+							</td>
+						</tr>
+					</table>
+					
+					
+					
+					<div class="jianGe" style="padding: 5px;">
+						
+					</div>
+				</form>
+			</div>
+			
+			<div class="OneF">
+				<img src="http://202.200.112.200/(yyvqvjr3r2uspeqg2qgblw30)/logo/login_pic.png" />
+			</div>
+		</div>
+		
+	</body>
+</html>

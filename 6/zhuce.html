@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -56,13 +56,17 @@
 			return false;
 		}
 		if(document.getElementById("yanzhengma").value!="1111"){
+			alert("验证码错误");
 			return false;
 		}
-		if(document.getElementById("mima").value!==document.getElementById("querenmima").value){
+		if(document.getElementById("mima").value!=document.getElementById("querenmima").value){
 			alert("密码不一致");
 			return false;
 		}
-		return false;
+		if(!(/^1[3456789]\d{9}$/.test((document.getElementById("shoujihao").value)))){ 
+        		alert("手机号码有误，请重填");  
+        		return false; 
+    		}
 		
 	}
 </script>
